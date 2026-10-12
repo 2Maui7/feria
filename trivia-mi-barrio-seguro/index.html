@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia · MI BARRIO SEGURO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <canvas id="confeti"></canvas>
+
+  <section id="pantalla-inicio" class="pantalla activa">
+    <div class="tarjeta-inicio">
+      <div class="escudo escudo-grande">MBS</div>
+      <h1>MI BARRIO SEGURO</h1>
+      <p class="subtitulo">La trivia del proyecto que protege tu barrio</p>
+      <ul class="reglas">
+        <li>En el tablero hay <b>9 cartas</b> boca abajo, ya mezcladas.</li>
+        <li>Puedes levantar hasta <b>5 cartas</b> en total.</li>
+        <li>Cada carta guarda una pregunta sobre el proyecto.</li>
+        <li>Si aciertas <b>3 preguntas</b>, ¡ganas en el acto!</li>
+        <li>Si gastas tus 5 cartas sin llegar a 3 aciertos, el barrio te dará otra oportunidad.</li>
+      </ul>
+      <button id="btn-jugar" class="btn btn-primario">Comenzar a jugar</button>
+    </div>
+  </section>
+
+  <section id="pantalla-juego" class="pantalla">
+    <header class="barra-juego">
+      <div class="marca">
+        <div class="escudo">MBS</div>
+        <span>Trivia · MI BARRIO SEGURO</span>
+      </div>
+      <div class="marcadores">
+        <div class="marcador">
+          <span class="marcador-etiqueta">Aciertos</span>
+          <span class="marcador-valor"><b id="contador-aciertos">0</b>/3</span>
+        </div>
+        <div class="marcador">
+          <span class="marcador-etiqueta">Cartas</span>
+          <span class="marcador-valor"><b id="contador-cartas">0</b>/5</span>
+        </div>
+      </div>
+    </header>
+
+    <p class="ayuda" id="texto-ayuda">Elige una carta para revelar su pregunta</p>
+
+    <div id="tablero" class="tablero"></div>
+  </section>
+
+  <div id="modal-pregunta" class="modal oculto" role="dialog" aria-modal="true">
+    <div class="modal-tarjeta">
+      <div class="modal-cabecera">
+        <span class="chip-carta" id="chip-carta">Carta 1 de 5</span>
+        <span class="chip-categoria" id="chip-categoria">Pregunta</span>
+      </div>
+      <h2 id="texto-pregunta"></h2>
+      <div id="opciones" class="opciones"></div>
+      <p id="feedback" class="feedback"></p>
+    </div>
+  </div>
+
+  <section id="pantalla-final" class="pantalla">
+    <div class="tarjeta-final">
+      <div id="icono-final" class="icono-final">★</div>
+      <h1 id="titulo-final"></h1>
+      <p id="mensaje-final"></p>
+      <div id="estadisticas-final" class="estadisticas"></div>
+      <button id="btn-reiniciar" class="btn btn-primario">Jugar otra vez</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

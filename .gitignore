@@ -1,0 +1,30 @@
+# IDE
+.idea/
+*.iml
+
+# Respaldos locales (contienen credenciales reales)
+*.bak
+
+# Histórico git de la trivia (unificado en este repositorio)
+trivia-mi-barrio-seguro/.git-trivia-backup/
+
+# Artefactos internos del asistente
+.artifacts/
+
+# Flutter / Dart
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/ios/Pods/
+**/ios/.symlinks/
+**/android/.gradle/
+**/android/local.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# Sistema
+.DS_Store
+Thumbs.db
